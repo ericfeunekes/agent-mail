@@ -1,2 +1,4 @@
 .uv-cache/
 .scratch/
+.agents/skills/development-source/
+__pycache__/

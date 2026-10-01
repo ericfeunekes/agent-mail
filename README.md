@@ -6,6 +6,8 @@ The service owns durable identity, messages, subscriptions, reading positions, a
 
 **Status: product shape agreed; client bindings and API details remain for implementation.** This is a single-user service for Eric's trusted agents, with no application authentication or per-thread access control. Client identity determines addressing, subscriptions, and reading state. Resources show unread summaries without changing state. Reading messages through a tool advances the identified reader's cursor. File transfers use short-lived, one-use URLs.
 
+For local and Codex Cloud development, follow [the shared-skills setup](docs/development-setup.md).
+
 This document incorporates Eric's decisions of September 27, 2026; client source findings below were reviewed on September 26. It defines behavior and boundaries, not final tool names, JSON schemas, dependency versions, or a deployment configuration. No server or client integration has been implemented or tested.
 
 **Identity has two levels.** An agent group identifies an agent type and machine, such as Codex on the iMac or Claude Code on another server. An agent thread identifies one conversation within that group. Machine identity is supplied explicitly and remains stable when its display name changes.
